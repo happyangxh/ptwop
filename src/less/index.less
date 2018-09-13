@@ -1,46 +1,8 @@
 @colorfff : #fff;
 @clock09d : #09d;
 @clock999 :#999;
-//头部导航
-.navbar-inverse {
-    margin-bottom: 0;
-    .navbar-brand{
-        color: @colorfff;
-        font-style: italic;
-    }
-    .navbar-nav{
-        li{
-            a{
-                color: @colorfff;
-            }
-            & a:hover{
-                color: @clock09d;
-            }
-             //工具提示
-            .tooltip img{
-                width: 100px;
-            }
 
-        }
-    }
-   
-}
-
-//logo导航
-.navbar-default{
-    margin: 0;
-.navbar-nav>li {
-        & a:hover{
-            color: @clock09d;
-            background: #eae7e7;
-        }
-        a{
-        font-size: 16px;
-        line-height: 40px;
-        
-        }
-    }
-} 
+@import "./header.less";
 
 //主内容
 .tablelist{
@@ -64,64 +26,51 @@
     }
   
 }
-
-.lefth3{
-    h3{
-        font-weight: bold;
-        color: @clock09d;
-        margin-bottom: 0;
-        border-bottom: 3px solid @clock09d;
-        padding-bottom: 5px;
-    }
-   
-    table{
-        border-top: 1PX solid #e8e8e8;
-        // thead{
-        // }
-        tbody{
-             tr{
-                td{
-                    line-height: 34px;
-                }
-            }
+//进行中借款
+.panel-default{
+    &>.panel-heading{
+        background: transparent;
+        padding: 0;
+        h3{
+            font-weight: bold;
+            color: @clock09d;
+            margin-bottom: 0;
+            border-bottom: 3px solid @clock09d;
         }
-       
+        .pull-right{
+            margin-top: 28px;
+        }
     }
-    .pull-right{
-        margin-top: 30px;
-    }
-   
-}
-
-.newlist{
-    table{
-        tbody{
-             tr{
-
-                td:nth-child(2){
-                    text-align: right;
-                }
-                td a{
-                    color: @clock999;
+    .panel-body{
+        padding: 15px 0px;
+        ul {
+            padding: 0;
+            li{
+                list-style: none;
+                line-height: 33px;
+                border-bottom: 1px dashed #ddd;
+                a{
+                    color: #333;
                     text-decoration: none;
-                }
-                
-            }
-            tr:hover{
-              background: @colorfff;      
-                  
-            }
-            td:hover a{
-                color: @clock09d;     
+                    &:hover{
+                        color:@clock09d ;
+                    }
+                }    
             }
         }
-       
+        
     }
 }
-.footer{
-    padding-top: 30px;
-    background: #f8f8f8;
-    .row div:nth-child(3) img{
-        width: 100%;
-    }
+.panel{
+    border: #fff;
+    box-shadow:none;
 }
+
+//解决小屏幕问题
+@media screen and (max-width:520px){
+   .hidetitle{
+       display: none;
+   }
+}
+
+@import "./footer.less";

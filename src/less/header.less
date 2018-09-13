@@ -1,0 +1,54 @@
+@colorfff : #fff;
+@clock09d : #09d;
+@clock999 :#999;
+//头部导航
+.navbar-inverse {
+    margin-bottom: 0;
+    border-radius: 0;
+    .navbar-brand{
+        color: @colorfff;
+        font-style: italic;
+    }
+    .navbar-nav{
+        li{
+            a{
+                color: @colorfff;
+            }
+            & a:hover{
+                color: @clock09d;
+            }
+             //工具提示
+            .tooltip img{
+                width: 100px;
+            }
+
+        }
+    }
+   
+}
+
+//logo导航
+.navbar-default{
+    margin:  0;
+.navbar-nav>li {
+        & a:hover{
+            color: @clock09d;
+            background: #eae7e7;
+        }
+        a{
+        font-size: 16px;
+        line-height: 40px;
+        
+        }
+    }
+    .navbar-brand{
+        margin-bottom: 16px;
+    }
+    span{
+        color: @clock09d;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 26px;
+        display: inline-block;
+    }
+} 
