@@ -1,0 +1,127 @@
+@colorfff : #fff;
+@clock09d : #09d;
+@clock999 :#999;
+//头部导航
+.navbar-inverse {
+    margin-bottom: 0;
+    .navbar-brand{
+        color: @colorfff;
+        font-style: italic;
+    }
+    .navbar-nav{
+        li{
+            a{
+                color: @colorfff;
+            }
+            & a:hover{
+                color: @clock09d;
+            }
+             //工具提示
+            .tooltip img{
+                width: 100px;
+            }
+
+        }
+    }
+   
+}
+
+//logo导航
+.navbar-default{
+    margin: 0;
+.navbar-nav>li {
+        & a:hover{
+            color: @clock09d;
+            background: #eae7e7;
+        }
+        a{
+        font-size: 16px;
+        line-height: 40px;
+        
+        }
+    }
+} 
+
+//主内容
+.tablelist{
+    margin-top: 20px;
+    .row{
+        &>div{
+            background: url("../../../images/feature01.png") no-repeat;
+            height: 65px;
+            padding-left: 80px;
+            margin-bottom: 20px;
+        }
+        h4{
+           margin: 0;
+        }
+        &>div:nth-of-type(2){
+            background: url("../../../images/feature02.png") no-repeat;
+        }
+        &>div:nth-of-type(3){
+            background: url("../../../images/feature03.png") no-repeat;
+        }
+    }
+  
+}
+
+.lefth3{
+    h3{
+        font-weight: bold;
+        color: @clock09d;
+        margin-bottom: 0;
+        border-bottom: 3px solid @clock09d;
+        padding-bottom: 5px;
+    }
+   
+    table{
+        border-top: 1PX solid #e8e8e8;
+        // thead{
+        // }
+        tbody{
+             tr{
+                td{
+                    line-height: 34px;
+                }
+            }
+        }
+       
+    }
+    .pull-right{
+        margin-top: 30px;
+    }
+   
+}
+
+.newlist{
+    table{
+        tbody{
+             tr{
+
+                td:nth-child(2){
+                    text-align: right;
+                }
+                td a{
+                    color: @clock999;
+                    text-decoration: none;
+                }
+                
+            }
+            tr:hover{
+              background: @colorfff;      
+                  
+            }
+            td:hover a{
+                color: @clock09d;     
+            }
+        }
+       
+    }
+}
+.footer{
+    padding-top: 30px;
+    background: #f8f8f8;
+    .row div:nth-child(3) img{
+        width: 100%;
+    }
+}
