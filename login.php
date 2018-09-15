@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>登录</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./lib/bootstrapValidator/css/bootstrapValidator.min.css">
-    <link rel="stylesheet" href="./dist/css/less/loginreg.min.css">
+    <link rel="stylesheet" href="./dist/css/loginreg.min.css">
 </head>
 <body>
 <!-- 引入表头 -->
@@ -34,7 +34,7 @@
         </div>
         <div class="panel-body">
         <p class="text-center">请输入用户名和密码</p>
-            <form class="form-horizontal">
+            <form class="form-horizontal" id="loginForm" method="post">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
                     <div class="col-sm-9">
@@ -59,6 +59,25 @@
     </div>
   </div>
  
+ <!-- 蒙城 -->
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body" id="loginContent">
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭弹窗</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- 引入尾部 -->
   <?php
     require_once("footer.php")

@@ -7,7 +7,8 @@ let cleanCSS = require("gulp-clean-css"); // 压缩文件
 let rename = require("gulp-rename");  //重命名
 let livereload = require("gulp-livereload"); //刷新
 let uglify  = require("gulp-uglify"); // 压缩js文件
-
+//js支持es6
+let babel = require("gulp-babel");
 //配置任务
 gulp.task('lesslive', function () {
   return gulp.src('./src/less/*.less')
@@ -20,12 +21,16 @@ gulp.task('lesslive', function () {
       path.basename += ".min"; //文件名
       // path.extname = ".md"; //后缀名
     }))
-    .pipe(gulp.dest('./dist/css/less')) //输出路劲
+    .pipe(gulp.dest('./dist/css')) //输出路劲
 
     .pipe(livereload()); //开启热刷新
 });
+//压缩js
 gulp.task("uglifyJS",function () {
   gulp.src('./src/js/*.js') //源文件
+        .pipe(babel({
+          presets: ['@babel/env']
+      }))
       .pipe(uglify()) //插件方法调用
       .pipe(rename(function (path) {
           path.basename += ".min"; //文件名： 原来的文件名+新增的文件

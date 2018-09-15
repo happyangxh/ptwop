@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>注册</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./lib/bootstrapValidator/css/bootstrapValidator.min.css">
-    <link rel="stylesheet" href="./dist/css/less/loginreg.min.css">
+    <link rel="stylesheet" href="./dist/css/loginreg.min.css">
 </head>
 <body>
 <!-- 引入表头 -->
@@ -34,8 +34,7 @@
         </div>
         <div class="panel-body">
             <p class="text-center">请填写注册信息，点击“提交注册”即可完成注册！</p>
-
-            <form class="form-horizontal">
+            <form class="form-horizontal" id="regForm" method="post">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
                     <div class="col-sm-9">
