@@ -1,0 +1,83 @@
+@import "./header.less";
+
+@color337ab7 : #337ab7;
+
+.personal{
+    margin-top: 10px;
+    .panel-title{
+        a{
+            color: @color337ab7;
+            font-size: 14px;
+            text-decoration:none;
+            &:hover{
+                color: #23527c;
+            }
+        }
+    }
+    .panel-group{
+        .panel-body {
+            padding: 0;
+            p{
+                padding: 10px 20px;
+               margin: 0;
+            }
+            .active{
+                background: @color337ab7 ;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .parderimg{
+        border: 1px solid #ddd;
+        padding: 10px;
+        img{
+            width:70px;
+            height:70px;
+            
+        }
+        margin-right: 20px;
+    }
+    .panel-body {
+        .cimg{
+            margin-top: 16px;
+            height: 50px;
+            border-top: 1px solid #ddd;
+            P{font-size: 18px;padding-top: 10px;}
+            span{
+                color: @color337ab7;
+            }
+        }   
+        .messagespadd{            
+             padding: 0;
+            list-style: none;
+            h5{
+                font-weight: bold;
+            }
+           
+            .leftpadd{
+                background: url('../../../images/shiming.png') no-repeat;
+               padding-left: 70px;
+               margin-top: 40px;
+            }
+            .leftpadd1{
+                background: url('../../../images/shouji.jpg') no-repeat;
+               margin-top: 40px;
+               padding-left: 70px;
+            }
+            .leftpadd2{
+                background: url('../../../images/youxiang.jpg') no-repeat;
+               margin-top: 40px;
+               padding-left: 70px;
+            }
+            .leftpadd3{
+                background: url('../../../images/baozhan.jpg') no-repeat;
+               margin-top: 40px;
+               padding-left: 70px;
+            }
+        }
+    }
+}
+//尾部
+@import "./footer.less";
