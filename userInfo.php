@@ -102,45 +102,67 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">个人资料</h3>
                 </div>
-                <div class="panel-body">
-                <form class="form-horizontal">
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
-                    <div class="col-sm-9">
-                    <input type="text" class="form-control" name="username" placeholder="请输入用户名">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">密&emsp;码</label>
-                    <div class="col-sm-9">
-                    <input type="password" class="form-control" name="password" placeholder="请输入密码">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">确认密码</label>
-                    <div class="col-sm-9">
-                    <input type="password" class="form-control" name="confirmPass" placeholder="请输入确认号码"">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">电话号码</label>
-                    <div class="col-sm-9">
-                    <input type="text" class="form-control" name="phone" placeholder="请输入电话号码""">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">邮&emsp;箱</label>
-                    <div class="col-sm-9">
-                    <input type="text" class="form-control" name="email" placeholder="请输入邮箱号">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-3 col-sm-9">
-                    <button type="submit" class="btn btn-success">立即注册</button>
-                    </div>
-                </div>
-            </form>
-                </div>
+                  <div class="panel-body">
+                      <form class="form-horizontal" id="formtext" >
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
+                            <div class="col-sm-9">
+                            <input type="text" class="form-control" name="username" placeholder="请输入用户名">
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">电话号码</label>
+                            <div class="col-sm-9">
+                            <input type="text" class="form-control" name="phone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">联系电话</label>
+                            <div class="col-sm-9">
+                            <input type="text" class="form-control" name="email" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">个人学历</label>
+                            <div class="col-sm-9">
+                              <select class="form-control">
+                                <option>初中</option>
+                                <option>中专/高中</option>
+                                <option>专科</option>
+                                <option>本科</option>
+                                <option>硕士研究生</option>
+                                <option>博士研究生</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">个人收入</label>
+                            <div class="col-sm-9">
+                              <select class="form-control">
+                                <option>1000元以下</option>
+                                <option>1000元-1999元</option>
+                                <option>2000元-2999元</option>
+                                <option>3000元-4999元</option>
+                                <option>5000元-8999元</option>
+                                <option>10000元以上</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">联系地址</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="username" placeholder="请输入用户名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                              <button type="submit" class="btn btn-primary">保存数据</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                  </div>
             </div>
         </div>
     </div>

@@ -4,6 +4,11 @@
 
 .personal{
     margin-top: 10px;
+   
+    transition: all 1s;
+    #btnOff{
+        display: none;
+    }
     .panel-title{
         a{
             color: @color337ab7;
@@ -15,6 +20,7 @@
         }
     }
     .panel-group{
+        margin-top: 0;
         .panel-body {
             padding: 0;
             p{
@@ -78,6 +84,53 @@
             }
         }
     }
+  #perleft{
+      .panel-group{
+          margin-top: 0;
+      }
+      .panel{
+        margin-top: 0;
+
+      }
+  }
 }
+@media screen and (max-width : 768px){
+    .personal{
+        .row{
+            position: relative;
+            height: 930px;
+            left: 0;
+            transition: all 1s;
+        }
+       overflow-x: hidden;
+       
+
+        #perleft{
+            position: absolute;
+            left: 0;
+        }
+        #perright{
+            position: absolute;
+            right:-50%;
+            #btnOff{
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left:16px;
+            }
+        }
+        .active{
+            left: -50%;
+        }
+    }
+  
+}
+#formtext{
+    width: 40%;
+    margin: 0 auto;
+}
+
+//borrow_apply
+
 //尾部
 @import "./footer.less";

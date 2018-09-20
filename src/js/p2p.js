@@ -1,6 +1,4 @@
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-
   //注册表单id
   $('#regForm')
     .bootstrapValidator({
@@ -165,7 +163,7 @@ $(function () {
               $('#num').text(num);
               if(num == 0){
                 clearInterval(times);
-                 location.href = './personal.php'; //跳转到指定
+                 location.href = './personal.php'; //跳转到指定页面
               }
            },1000)
           
@@ -177,9 +175,4 @@ $(function () {
          }
      },'json')
    })  
-  //个人中心的折叠
-  $('#myCollapsible').collapse({
-    toggle: true
-  })
-
 })

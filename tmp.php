@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./dist/css/less/header.min.css">
-    <link rel="stylesheet" href="./dist/css/less/footer.min.css">
+    <link rel="stylesheet" href="./dist/css/header.min.css">
+    <link rel="stylesheet" href="./dist/css/footer.min.css">
 </head>
 <body>
 <!-- 引入表头 -->
@@ -22,6 +22,5 @@
   ?>
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./dist/js/p2p.min.js"></script>
 </body>
 </html>

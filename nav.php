@@ -16,15 +16,27 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav"></ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="./index.php">首页</a></li>
-        <li><a href="./personal.php">小强</a></li>
-        <li><a href="#">赶快充值</a></li>
-        <li><a href="./register.php">注册</a></li>
-        <li><a href="./login.php">登录</a></li>
-        <li><a href="#">注销</a></li>
-        <li><a href="#">帮助</a></li>
+        <li id="font"><a href="./index.php">首页</a></li>
+        <!-- 登录后 -->
+       
         <li><a href="#" data-toggle="tooltip" data-placement="bottom" data-html="true" title=" <img src= './images/contract.png' alt=''>">联系客服</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script>
+    $.get('./api/look.php',function(data){
+        if(data.isSuccess){
+          let htmlStr = `  <li><a href="./personal.php">${data.username}</a></li>
+                           <li><a href="#">赶快充值</a></li>;
+                           <li><a href="./api/loginOut.php">注销</a></li>`;
+          $('#font').after(htmlStr);
+        }else{  
+          let htmlStr = ` <li><a href="./register.php">注册</a></li>
+                          <li><a href="./login.php">登录</a></li>`;
+          $('#font').after(htmlStr);
+        }
+    },'json')
+</script>

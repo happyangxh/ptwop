@@ -18,8 +18,14 @@
     //结果集
     $re = mysqli_fetch_assoc($resut);
     
-    //var_dump($re);
+    // var_dump($re);  //得到是一个关联数组
     if($re != null){
+        //开启会话session
+        session_start();
+        //创建变量
+        $_SESSION["username"] = $re["username"];
+        $_SESSION["userid"] = $re["userid"];
+        
         $rsArray=["isSuccess"=>true,"msg"=>"用户登录成功!"];
           //json_encode() 把关联数组转换为json格式
           echo json_encode($rsArray);
@@ -27,4 +33,7 @@
         $rsArray=["isSuccess"=>false,"msg"=>"用户登录失败!"];
         echo json_encode($rsArray);
     }
+    mysqli_free_result($resut); //释放结果集
+    // //关闭数据库
+    require_once('./close.php');
 
